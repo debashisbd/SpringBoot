@@ -1,4 +1,4 @@
-package location;
+package com.example.demo.location;
 
 public class Location {
 

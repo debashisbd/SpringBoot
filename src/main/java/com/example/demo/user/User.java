@@ -1,6 +1,6 @@
-package user;
+package com.example.demo.user;
 
-import location.Location;
+import com.example.demo.location.Location;
 
 public class User {
 	

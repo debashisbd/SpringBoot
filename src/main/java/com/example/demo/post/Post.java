@@ -1,6 +1,6 @@
-package post;
+package com.example.demo.post;
 
-import user.User;
+import com.example.demo.user.User;
 
 public class Post {
 
