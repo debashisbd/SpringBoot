@@ -1,5 +1,6 @@
 package com.example.demo.post;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -38,7 +39,7 @@ public class PostService {
 			"We all need someone");	
 		
 		
-		List<Post> posts = Arrays.asList(post1,post2);
+		List<Post> posts = new ArrayList<>(Arrays.asList(post1,post2));
 		
 		
 	
@@ -55,5 +56,30 @@ public class PostService {
 		return post;
 		 
 	 }
+ 
+ 
+ public void addPost(Post post) {
+	 posts.add(post);
+	 
+ }
 
+ public void updatePost(String id, Post post) {
+
+	    for(int i = 0; i < posts.size(); i++) {
+
+		Post p = posts.get(i);
+
+		if(p.equals(post)) {
+
+		     posts.set(i, post);
+		}
+	    }
+	}
+
+ 
+ public void deletePost(String id) {
+     posts.removeIf(p -> p.getId().equals(id));		
+}
+ 
+ 
 }
